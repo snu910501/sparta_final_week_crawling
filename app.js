@@ -1,10 +1,13 @@
-const { Builder, By, Key, until } = require('selenium-webdriver');
-const chrome = require('selenium-webdriver/chrome');
-const fs = require('fs');
+const express = require('express');
+const app = express();
+
 const dabangCrawling = require('./modules/dabang');
+const zigbangCrawling = require("./modules/zigbang");
 
 const run = async () => {
   await dabangCrawling();
+  // await zigbangCrawling();
+  return
 }
 
 addId = async (arr, room) => {
